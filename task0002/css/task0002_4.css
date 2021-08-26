@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.sbox {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+}
+
+.icon-folder {
+  width: 45px;
+}
+
+form {
+  display: inline-block;
+}
+
+label {
+  font-size: 30px;
+}
+
+.search {
+  width: 300px;
+  height: 38px;
+  /* 搜索按钮 */
+  background-image: url('https://static.runoob.com/images/mix/searchicon.png');
+  /* 定位搜索按钮 */
+  background-position: 270px;
+  /* 不重复图片 */
+  background-repeat: no-repeat;
+}
+
+button {
+  height: 38px;
+  margin-left: 4px;
+}
+
+.promptContainer {
+  position: absolute;
+  top: 3rem;
+  left: 7.15rem;
+  /* 移除默认的列表样式 */
+  list-style-type: none;
+}
+
+.promptContainer li a {
+  display: block;
+  width: 300px;
+  height: 38px;
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  padding: 12px;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+
+.promptContainer li:hover {
+  background-color: #e2e2e2;
+  cursor: default;
+}

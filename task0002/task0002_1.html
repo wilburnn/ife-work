@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>input box</title>
+  </head>
+  <body>
+    <p>
+      输入兴趣爱好，按逗号分隔，点击按钮后，把用户输入的兴趣爱好按照分隔符分开后保存到一个数组，<br />
+      过滤掉空的、重复的爱好，每一个爱好输出成为一个 checkbox，爱好内容作为
+      checkbox 的 label。
+    </p>
+    <form>
+      <label for="hobby">兴趣爱好</label><br />
+      <textarea
+        class="hobby"
+        name="hobby"
+        rows="5"
+        cols="20"
+        required
+      ></textarea
+      ><br />
+      <!-- 点击按钮时，浏览器尝试将表单数据发给服务器 -->
+      <!-- <button class="submit" name="button">submit</button><br /> -->
+      <!-- 点击按钮时，浏览器不会将表单数据发给服务器 -->
+      <button type="button" class="submit" name="button">submit</button><br />
+      <!-- 点击按钮时，浏览器尝试将表单数据发给服务器 -->
+      <!-- <input type="submit" class="submit" value="submit"> -->
+      <!-- 点击按钮时，浏览器不会将表单数据发给服务器 -->
+      <!-- <input type="button" class="submit" value="submit"> -->
+    </form>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/task0002_1.js"></script>
+  </body>
+</html>
