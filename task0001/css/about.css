@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 980px;
+  background-color: #eeeeee;
+}
+
+.resume {
+  width: 980px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.resume-item {
+  list-style: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  background: #eeeeee;
+}
+
+.resume-item::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: no-repeat center/90% url(/task0001/img/portrait.png);
+  background-color: inherit;
+}
+
+.resume-item:first-child::after {
+  width: 200px;
+  height: 200px;
+  top: -90px;
+}
+
+.resume-item-title {
+  position: absolute;
+  top: 120px;
+  left: -180px;
+  width: 80px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.resume-item-content {
+  width: 400px;
+  padding: 115px 40px 20px 40px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.resume-item:first-child .resume-item-content {
+  text-indent: 2em;
+  padding: 130px 40px 20px 40px;
+}
+
+.resume-experience li {
+  position: relative;
+  list-style: none;
+  padding: 0 40px 40px 20px;
+}
+
+.resume-education li:last-child {
+  padding-bottom: 0;
+}
+
+.resume-experience time {
+  position: absolute;
+  left: -67px;
+  width: 60px;
+  line-height: 1.8;
+  text-align: center;
+  border: 6px solid #eee;
+  border-radius: 10%;
+  background-color: #fff;
+}

@@ -1,0 +1,157 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 980px;
+  background-color: #eeeeee;
+}
+
+main {
+  position: relative;
+  width: 980px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.masonry-outer-wrap {
+  position: absolute;
+  top: 20px;
+  width: 710px;
+}
+
+.tab-menu {
+  display: flex;
+  width: 630px;
+  height: 50px;
+}
+
+.tab-menu a {
+  padding: 15px 20px 20px 20px;
+  border: 1px solid #999999;
+  border-top: 4px solid #23d8cf;
+  font-size: 10px;
+  color: black;
+  background-color: #ffffff;
+}
+
+.tab-menu a:hover {
+  border-top-color: #1cafa8;
+}
+
+.tab-menu a:active {
+  border-top-color: #ee610f;
+}
+
+.readmore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 710px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: #ffffff;
+}
+
+aside {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 260px;
+}
+
+.search-bar {
+  width: 260px;
+  height: 80px;
+  background-color: #ffffff;
+}
+
+input {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 171px;
+  height: 42px;
+  padding-left: 32px;
+  border: 1px solid #d8d8d8;
+  background-image: url('/task0001/img/search.png');
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 51px;
+  height: 42px;
+  border: 1px solid #d8d8d8;
+  font-family: Century Gohic;
+  font-size: 20px;
+  color: white;
+  background-color: #d8d8d8;
+}
+
+.ranking {
+  width: 260px;
+  height: 240px;
+  margin-top: 10px;
+  padding: 20px 0 0 12px;
+  background-color: #ffffff;
+}
+
+.ranking p {
+  margin: 0 0 26px 0;
+  font-size: 14px;
+  color: #666666;
+}
+
+.ranking progress {
+  width: 102px;
+  border: 1px solid #20b2aa;
+  background-color: #f6f6f6;
+}
+
+progress::-moz-progress-bar {
+  background-color: #20b2aa;
+}
+
+.masonry-container {
+  display: grid;
+  grid-auto-rows: 50px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  padding: 10px;
+  background-color: #fff;
+}
+
+[short] {
+  grid-row: span 3;
+  background-color: #1cafa8;
+}
+
+[tall] {
+  grid-row: span 4;
+  background-color: #d9a300;
+}
+
+[taller] {
+  grid-row: span 5;
+  background-color: #ee610f;
+}
+
+[tallest] {
+  grid-row: span 6;
+  background-color: gray;
+}
+
+.masonry-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: white;
+}
