@@ -1,0 +1,310 @@
+/* CSS Custom Properties Definitions */
+:root {
+  --maxWidth-none: 'none';
+  --maxWidth-xxs: 16rem;
+  --maxWidth-xs: 20rem;
+  --maxWidth-sm: 24rem;
+  --maxWidth-md: 28rem;
+  --maxWidth-lg: 32rem;
+  --maxWidth-xl: 36rem;
+  --maxWidth-2xl: 42rem;
+  --maxWidth-3xl: 48rem;
+  --maxWidth-4xl: 56rem;
+  --maxWidth-full: '100%';
+  --maxWidth-wrapper: var(--maxWidth-2xl);
+  --spacing-px: '1px';
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+  --fontFamily-sans: -apple-system, Montserrat, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --fontFamily-serif: 'Merriweather', 'Georgia', Cambria, 'Times New Roman',
+    Times, serif;
+  --font-body: var(--fontFamily-sans);
+  --font-heading: var(--fontFamily-sans);
+  --fontWeight-normal: 400;
+  --fontWeight-medium: 500;
+  --fontWeight-semibold: 600;
+  --fontWeight-bold: 700;
+  --fontWeight-extrabold: 800;
+  --fontWeight-black: 900;
+  --fontSize-root: 16px;
+  --lineHeight-none: 1;
+  --lineHeight-tight: 1.1;
+  --lineHeight-normal: 1.5;
+  --lineHeight-relaxed: 1.625;
+  /* 1.200 Minor Third Type Scale */
+  --fontSize-0: 0.833rem;
+  --fontSize-1: 1rem;
+  --fontSize-2: 1.2rem;
+  --fontSize-3: 1.44rem;
+  --fontSize-4: 1.728rem;
+  --fontSize-5: 2.074rem;
+  --fontSize-6: 2.488rem;
+  --fontSize-7: 2.986rem;
+  --color-primary: #7db35e;
+  --color-button-light: #8cc26d;
+  --color-text: #2e353f;
+  --color-text-light: #4f5969;
+  --color-heading: #1a202c;
+  --color-heading-black: black;
+  --color-accent: #353535;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Smooth the font on the level of the pixel on Mac OS X/macOS */
+  -webkit-font-smoothing: antialiased;
+  /* Render text with grayscale antialiasing, as opposed to the subpixel */
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--fontSize-root);
+  line-height: var(--lineHeight-normal);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 960px;
+  height: 100vh;
+  font-family: var(--font-body);
+}
+
+.header {
+  height: 60px;
+  border: 2px solid var(--color-accent);
+  padding: var(--spacing-3);
+  font-size: var(--fontSize-2);
+  background-color: #fff1b9;
+}
+
+.main {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+@font-face {
+  font-family: 'iconfont'; /* Project id 2377776 */
+  src: url('//at.alicdn.com/t/font_2377776_b03fw0060p.woff2?t=1629268485800')
+      format('woff2'),
+    url('//at.alicdn.com/t/font_2377776_b03fw0060p.woff?t=1629268485800')
+      format('woff'),
+    url('//at.alicdn.com/t/font_2377776_b03fw0060p.ttf?t=1629268485800')
+      format('truetype');
+}
+
+#bundle() {
+  .button {
+    border-top: 2px solid var(--color-accent);
+    padding: var(--spacing-2) 0 var(--spacing-2) var(--spacing-3);
+    cursor: pointer;
+  }
+
+  .icon {
+    font-family: 'iconfont' !important;
+    font-size: 32px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Task class bar style*/
+.task-class-wrap {
+  display: flex;
+  flex-direction: column;
+  width: var(--maxWidth-xxs);
+  border: 2px solid var(--color-accent);
+  border-top: none;
+  border-right: none;
+  background-color: #f0f0f4;
+
+  & > div:first-child {
+    padding: var(--spacing-4) 0 var(--spacing-3) var(--spacing-4);
+  }
+
+  & > .task-class {
+    flex: 1 1 auto;
+
+    div {
+      padding: 0 0 0 var(--spacing-4);
+    }
+
+    & > ul {
+      display: flex;
+      flex-direction: column;
+
+      & > li {
+        list-style: none;
+        cursor: pointer;
+
+        & > div:hover > .icon-delete {
+          display: block;
+        }
+
+        & > ul {
+          & > li {
+            padding-left: var(--spacing-8);
+          }
+
+          & > li:hover {
+            background-color: #e0e0e6;
+          }
+
+          & > li:hover > .icon-delete {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .selected-class {
+      background-color: #bcbcc7;
+    }
+  }
+
+  & > .task-class-add-btn {
+    #bundle.button();
+  }
+
+  .icon {
+    #bundle.icon();
+  }
+
+  .icon-folder {
+    font-size: 24px;
+    margin-right: var(--spacing-2);
+  }
+
+  .icon-delete {
+    font-size: 24px;
+    display: none;
+    float: right;
+    margin-right: var(--spacing-1);
+  }
+}
+
+/* Task list bar style */
+.task-list-wrap {
+  display: flex;
+  flex-direction: column;
+  width: var(--maxWidth-xxs);
+  border: 2px solid var(--color-accent);
+  border-top: none;
+  background-color: #ffffff;
+
+  & > .task-status {
+    display: flex;
+    height: 42px;
+    border-bottom: 2px solid var(--color-accent);
+    padding: var(--spacing-2) 0 var(--spacing-2) var(--spacing-3);
+
+    & > span {
+      margin-left: 18px;
+      cursor: pointer;
+    }
+
+    & > .selected-status {
+      border: 1px solid var(--color-accent);
+      padding: 0 var(--spacing-1);
+      background-color: #f0f0f4;
+    }
+  }
+
+  & > .task-list {
+    flex: 1 1 auto;
+
+    & > .task-date {
+      & > div {
+        padding: var(--spacing-1) 0 var(--spacing-1) var(--spacing-4);
+        background-color: #f0f0f4;
+      }
+    }
+
+    li {
+      padding: var(--spacing-1) 0 var(--spacing-1) var(--spacing-6);
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .completed {
+      color: #ee9292;
+    }
+  }
+
+  & > .task-add-btn {
+    #bundle.button();
+  }
+}
+
+/* Task detail bar style */
+.task-detail-wrap {
+  flex-grow: 1;
+  border: 2px solid var(--color-accent);
+  border-left: none;
+  border-top: none;
+  background-color: #ffffff;
+
+  .detail-header {
+    position: relative;
+    h3 {
+      height: 50px;
+      border-bottom: 2px solid var(--color-accent);
+      padding: var(--spacing-2) 0 var(--spacing-2) var(--spacing-3);
+    }
+  }
+
+  .detail-date {
+    border-bottom: 2px solid var(--color-accent);
+    padding: var(--spacing-2) 0 var(--spacing-2) var(--spacing-3);
+    background-color: #f0f0f4;
+  }
+
+  .detail-content {
+    padding: var(--spacing-2) 0 var(--spacing-2) var(--spacing-3);
+    background-color: #ffffff;
+  }
+
+  .icon {
+    #bundle.icon();
+  }
+
+  .icon-finish,
+  .icon-edit {
+    position: absolute;
+    top: 0;
+  }
+
+  .icon-finish {
+    right: 100px;
+  }
+
+  .icon-edit {
+    right: 50px;
+  }
+
+  .detail-content {
+    padding: var(--spacing-5);
+    p {
+      line-height: 1.8;
+    }
+  }
+}
