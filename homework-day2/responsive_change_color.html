@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Change Color</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: cadetblue;
+      }
+
+      @media screen and (min-width: 960px) {
+        div {
+          background-color: indianred;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>屏幕宽度小于 960px 时改变颜色</div>
+  </body>
+</html>

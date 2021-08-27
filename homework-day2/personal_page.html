@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/personal_page.css" />
+    <title>Personal Page</title>
+  </head>
+  <body>
+    <aside class="c-profile">
+      <div class="c-profile__header">个人中心</div>
+      <div class="c-profile__body">
+        <img
+          class="c-profile__avatar"
+          src="./img/portrait.png"
+          alt="个人头像"
+        />
+        <p class="c-profile__name">wilburn</p>
+        <p class="c-profile__email">1176685189@qq.com</p>
+        <div class="c-profile__icons">
+          <div class="l-container-profile__icon">
+            <svg class="icon icon-setting" aria-hidden="true">
+              <use xlink:href="#icon-setting"></use>
+            </svg>
+          </div>
+          <div class="l-container-profile__icon">
+            <svg class="icon icon-email" aria-hidden="true">
+              <use xlink:href="#icon-email"></use>
+            </svg>
+            <span class="icon-inform icon-setting-inform">20</span>
+          </div>
+          <div class="l-container-profile__icon">
+            <svg class="icon icon-bell" aria-hidden="true">
+              <use xlink:href="#icon-bell"></use>
+            </svg>
+            <span class="icon-inform icon-setting-inform">1</span>
+          </div>
+        </div>
+        <p class="c-profile__moreinfo">展开显示动态信息</p>
+      </div>
+    </aside>
+    <main class="c-record">
+      <div class="c-record__header">
+        <div class="c-record__search">
+          <svg class="c-record__icon icon-search" aria-hidden="true">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+          <span>请搜索...</span>
+        </div>
+        <div class="c-record__switch">
+          <span>邮箱</span>
+          <span>日历</span>
+        </div>
+      </div>
+      <div class="c-record__body">
+        <div class="c-record__notepad">
+          <h2>记事本</h2>
+          <ul>
+            <li>
+              <img class="earth" src="./img/earth.png" alt="地球哭了" />
+              我爱地球，地球是我家，环境靠大家！地球日走起！
+            </li>
+            <li>今天记得要抄写作文一百遍。今天记得要抄写作文一百遍。</li>
+            <li>妈妈今天生日，记得订花哟~</li>
+            <li>6点带小狗出去散步</li>
+            <li>
+              7.6高考，定个闹钟。记得起床！记得起床！记得起床！重要的事说三遍！
+            </li>
+            <li>小红今天借了我200块钱，说两周后还我。</li>
+            <li>买礼物，爸爸后天生日</li>
+            <li>1+1=2</li>
+          </ul>
+          <div class="l-container-notepad__add">
+            <button class="notepad__add">添加 +</button>
+          </div>
+        </div>
+        <div class="c-record__email">
+          <div class="email__status">
+            <span>收件箱</span> / <span>已发送</span>
+          </div>
+          <hr />
+          <div class="email__sender">
+            <img src="img/portrait.png" alt="邮件发送者头像" />
+            <div class="sender__info">
+              <p>Emily</p>
+              <p class="sender__date">2020年5月14日 星期五 上午10:57</p>
+            </div>
+          </div>
+          <hr />
+          <div class="email__content">
+            <h2>学习建议</h2>
+            <h3>推荐一些学习材料</h3>
+            <p>书籍</p>
+            <ul>
+              <li>
+                HTML、CSS：《Head First HTML与CSS》、《CSS揭秘》、《精通CSS
+                高级Web标准解决方案》、
+                《CSS权威指南》、《图解CSS3核心技术与案例实战》、《CSS禅意花园》、《CSS世界》……
+              </li>
+              <li>
+                JavaScript：《JavaScript高级程序设计》、《JavaScript权威指南》、《你不知道的JavaScript》、
+                《深入理解ES6》、《编写可维护的JavaScript》、《高性能JavaScript》、《JavaScript设计模式》、
+                《JavaScript语言精髓和编程实践》……
+              </li>
+              <li>
+                计算机基础知识及进阶：《HTTP权威指南》、《Webkit技术内幕》、《深入理解计算机系统》、
+                《代码大全》、《编程珠玑》、《设计模式》……
+              </li>
+              <li>
+                设计：《写给大家看的设计书》、《点石成金》、《用户体验要素》
+              </li>
+            </ul>
+            <p>
+              带着目的进行书籍的选择和阅读，辨证独立思考进行选择，辨证地进行阅读
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/iconfont.js"></script>
+  </body>
+</html>
