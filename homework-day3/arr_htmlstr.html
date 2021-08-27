@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array to htmlString</title>
+  </head>
+  <body>
+    <div></div>
+
+    <script>
+      const dirArr = ['index.html', 'js', ['index.js'], 'css', ['index.css']]
+
+      function arrToHtml(dirArr) {
+        const len = dirArr.length
+        let res = ''
+        let i = 0
+        while (i < len) {
+          if (i + 1 < len && Array.isArray(dirArr[i + 1])) {
+            // 当前位置为文件夹
+            let subDirArr = dirArr[i + 1]
+            res += '<li>' + dirArr[i] + arrToHtml(subDirArr) + '</li>'
+            i += 2
+          } else {
+            res += '<li>' + dirArr[i] + '</li>'
+            i += 1
+          }
+        }
+        return '<ul>' + res + '</ul>'
+      }
+
+      document.body.innerHTML = arrToHtml(dirArr)
+    </script>
+  </body>
+</html>

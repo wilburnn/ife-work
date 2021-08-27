@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep clone</title>
+  </head>
+  <body>
+    <script>
+      const obj = { id: 1, obj: { id: 2 } }
+
+      function deepClone(obj) {
+        let res = {}
+        for (let key in obj) {
+          // 判断当前属性值是否为对象
+          if (obj[key].toString() === '[object Object]') {
+            let subObj = obj[key]
+            res[key] = deepClone(subObj)
+          } else {
+            res[key] = obj[key]
+          }
+        }
+        return res
+      }
+
+      const newObj = deepClone(obj)
+      console.log(newObj)
+    </script>
+  </body>
+</html>
