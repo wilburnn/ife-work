@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeWork_Day1</title>
+  <style type="text/css">
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .textToRed,
+    .reset {
+      margin: 6px;
+      border: 1px solid rgb(196, 196, 196);
+      padding: 4px 8px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hello World!</h1>
+    <button class="textToRed">变为红色</button>
+    <button class="reset">复原</button>
+  </div>
+  <script>
+    const textToRedBtn = document.querySelector('.textToRed')
+    const resetBtn = document.querySelector('.reset')
+
+    function textToRed() {
+      let textElem = document.querySelector('h1')
+      textElem.style.color = 'red'
+    }
+
+    function reset() {
+      let textElem = document.querySelector('h1')
+      textElem.style.color = ''
+    }
+
+    textToRedBtn.addEventListener('click', textToRed, false)
+    resetBtn.addEventListener('click', reset, false)
+  </script>
+</body>
+</html>
