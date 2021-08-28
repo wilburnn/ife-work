@@ -93,22 +93,12 @@ body {
   border: 2px solid var(--color-accent);
   padding: var(--spacing-3);
   font-size: var(--fontSize-2);
-  background-color: #fff1b9;
+  background-color: #f0f0f4;
 }
 
 .main {
   display: flex;
   height: calc(100vh - 60px);
-}
-
-@font-face {
-  font-family: 'iconfont'; /* Project id 2377776 */
-  src: url('//at.alicdn.com/t/font_2377776_b03fw0060p.woff2?t=1629268485800')
-      format('woff2'),
-    url('//at.alicdn.com/t/font_2377776_b03fw0060p.woff?t=1629268485800')
-      format('woff'),
-    url('//at.alicdn.com/t/font_2377776_b03fw0060p.ttf?t=1629268485800')
-      format('truetype');
 }
 
 #bundle() {
@@ -119,11 +109,11 @@ body {
   }
 
   .icon {
-    font-family: 'iconfont' !important;
-    font-size: 32px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
   }
 }
 
@@ -145,7 +135,7 @@ body {
     flex: 1 1 auto;
 
     div {
-      padding: 0 0 0 var(--spacing-4);
+      padding: 0 0 var(--spacing-1) var(--spacing-4);
     }
 
     & > ul {
@@ -290,21 +280,17 @@ body {
   .icon-finish,
   .icon-edit {
     position: absolute;
-    top: 0;
+    top: 8px;
   }
 
   .icon-finish {
+    font-size: 2em;
     right: 100px;
   }
 
   .icon-edit {
+    font-size: 2em;
     right: 50px;
   }
-
-  .detail-content {
-    padding: var(--spacing-5);
-    p {
-      line-height: 1.8;
-    }
-  }
 }
+

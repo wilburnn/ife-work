@@ -1,0 +1,134 @@
+.addplan-modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  .addplan-modal-close-icon {
+    font-family: 'iconfont' !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .addplan-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    background-color: #fff;
+    animation-name: animatemodal;
+    animation-duration: 0.4s;
+  }
+
+  .addplan-modal-close {
+    display: block;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    text-align: center;
+    top: -2px;
+    right: 0;
+    color: #00000073;
+    background: 0 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+
+  .addplan-modal-close:hover {
+    color: var(--color-primary);
+    transition: 0.3s;
+  }
+
+  .addplan-modal-header {
+    padding: 14px 24px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .addplan-modal-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .addplan-modal-body {
+    padding: 20px 24px;
+  }
+
+  .form-group-title {
+    text-align: right;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .task-class-input {
+    font-size: 14px;
+    width: 200px;
+    height: 32px;
+    padding: 4px 11px;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .task-class-input:hover {
+    border-color: var(--color-primary);
+  }
+
+  .task-class-input:focus {
+    border-color: var(--color-primary);
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+      0 0 4px rgb(125, 179, 94, 0.8);
+  }
+
+  .task-class-input::placeholder {
+    color: #bfbfbf;
+    opacity: 1;
+  }
+
+  .addplan-modal-footer {
+    padding: 12px 24px;
+    text-align: right;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .addplan-btn {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid transparent;
+    box-shadow: 0 2px #00000004;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    height: 32px;
+    padding: 4px 15px;
+    font-size: 16px;
+    border-radius: 2px;
+    border-color: #d9d9d9;
+    background: #fff;
+  }
+
+  .addplan-btn-cancel:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .addplan-btn-confirm {
+    margin-left: 6px;
+    color: #fff;
+    background-color: var(--color-primary);
+  }
+
+  .addplan-btn-confirm:hover {
+    background-color: var(--color-button-light);
+  }
+}

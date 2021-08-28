@@ -1,0 +1,220 @@
+.addtodo-modal-wrap {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  @font-face {
+    font-family: 'iconfont';
+    src: url('//at.alicdn.com/t/font_2731227_elqbz70kuzt.woff2?t=1628602335470')
+        format('woff2'),
+      url('//at.alicdn.com/t/font_2731227_elqbz70kuzt.woff?t=1628602335470')
+        format('woff'),
+      url('//at.alicdn.com/t/font_2731227_elqbz70kuzt.ttf?t=1628602335470')
+        format('truetype');
+  }
+
+  .addtodo-modal-close-icon {
+    font-family: 'iconfont' !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .addtodo-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    background-color: #fff;
+    animation-name: animatemodal;
+    animation-duration: 0.4s;
+  }
+
+  .addtodo-modal-close {
+    display: block;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    text-align: center;
+    top: -2px;
+    right: 0;
+    color: #00000073;
+    background: 0 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+
+  .addtodo-modal-close:hover {
+    color: var(--color-primary);
+    transition: 0.3s;
+  }
+
+  .addtodo-modal-header {
+    padding: 14px 24px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .addtodo-modal-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .addtodo-modal-body {
+    padding: 20px 24px;
+  }
+
+  .form-group:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .form-input {
+    font-family: 'Microsoft Yahei';
+    font-size: 14px;
+    width: 200px;
+    margin-left: 10px;
+    height: 32px;
+    padding: 4px 11px;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .form-input:hover {
+    border-color: var(--color-primary);
+  }
+
+  .form-input:focus {
+    border-color: var(--color-primary);
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+      0 0 4px rgb(125, 179, 94, 0.8);
+  }
+
+  .form-input::placeholder {
+    font-family: 'Microsoft Yahei';
+    font-size: 14px;
+    color: #bfbfbf;
+    opacity: 1;
+  }
+
+  .form-textarea-wrap > label * {
+    vertical-align: top;
+  }
+
+  .form-textarea {
+    height: 60px;
+    resize: none;
+  }
+
+  date-picker {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .addtodo-modal-footer {
+    padding: 12px 24px;
+    text-align: right;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .addtodo-btn {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid transparent;
+    box-shadow: 0 2px #00000004;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    height: 32px;
+    padding: 4px 15px;
+    font-size: 16px;
+    border-radius: 2px;
+    border-color: #d9d9d9;
+    background: #fff;
+  }
+
+  .addtodo-btn-cancel:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .addtodo-btn-confirm {
+    margin-left: 6px;
+    color: #fff;
+    background-color: var(--color-primary);
+  }
+
+  .addtodo-btn-confirm:hover {
+    background-color: var(--color-button-light);
+  }
+
+  .addtodo-checkbox-wrap {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    font-size: 16px;
+    color: #000000d9;
+    cursor: pointer;
+  }
+
+  .addtodo-checkbox-wrap > span {
+    display: block;
+    margin-left: 16px;
+  }
+
+  .addtodo-checkbox-wrap span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+    border-radius: 2px;
+    border: 1.5px solid #d9d9d9;
+  }
+
+  .addtodo-checkbox-wrap:hover span::before {
+    border: 1.5px solid var(--color-primary);
+    transition: all 0.3s;
+  }
+
+  .addtodo-checkbox-wrap span::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 5px;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(-45deg) scale(0);
+    transition: transform ease 0.25s;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+  }
+
+  input[type='checkbox']:checked ~ span::before {
+    background-color: var(--color-primary);
+    border: 1.5px solid var(--color-primary);
+  }
+
+  input[type='checkbox']:checked ~ span::after {
+    transform: rotate(-45deg) scale(1);
+  }
+
+  input[type='checkbox'] {
+    opacity: 0;
+  }
+}
