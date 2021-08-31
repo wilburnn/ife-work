@@ -8,11 +8,10 @@ window.onload = function () {
   if (!localStorage.getItem('默认分类')) {
     const defaultClass = { category: '', tasks: [] } as TaskClassType
     localStorage.setItem('默认分类', JSON.stringify(defaultClass))
-  } else {
-    new TaskClass()
-    new TaskList()
-    const elementsOfPage = new ElementsOfPage()
-    elementsOfPage.renderTaskClass()
-    elementsOfPage.renderTaskList()
   }
+  new TaskClass()
+  new TaskList()
+  const elementsOfPage = new ElementsOfPage()
+  elementsOfPage.renderTaskClass()
+  elementsOfPage.renderTaskList()
 }
